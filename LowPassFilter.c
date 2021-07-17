@@ -18,7 +18,7 @@ int main()
 float LowPassFilter(float raw)
 {
     /* equation: yt := ß xt + (1-ß) yt-1 */
-    static float output_prev = 0.0;
+    static float output_prev;
     float output = beta * raw + (1-beta)*output_prev;
     output_prev = output;
 
